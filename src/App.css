@@ -1,22 +1,27 @@
-* {
-    margin: 0;
+body{
     padding: 0;
-    box-sizing: border-box;
-    background-color: coral;
+    margin: 0;
+    background-image: url(wall.png);
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 
-.box {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    width: 500px;
-    transform: translate(-50%, -50%);
+.main{
+    width: 520px;
+    margin-left: calc(50% - 260px);
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 100px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 5px;
 }
 
 input {
     position: relative;
     display: inline-block;
-    font-size: 20px;
+    font-size: 17px;
     box-sizing: border-box;
     transition: .5s;
 }
@@ -31,13 +36,51 @@ input[type="text"] {
     border-radius: 10px 0 0 10px;
 }
 
-input[type="submit"] {
+#add-name-btn {
     position: relative;
     border-radius: 0 10px 10px 0;
-    width: 150px;
-    height: 40px;
-    outline: none;
-    border: none;
+    width: 130px;
+    height: 40.3px;
     cursor: pointer;
-    background-color: #ffc107;
+}
+
+#todo-list-container{
+    overflow-y: auto;
+    height: 500px;
+}
+
+.small-bottom-margin{
+    margin-bottom: 15px;
+}
+
+#header{
+    text-align: center;
+}
+
+#new-todo-input {
+    width: 400px;
+    position: relative;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#submit-new-todo-btn{
+    float: right;
+    width: 75px;
+}
+
+#todo-list-container li{
+    cursor: pointer;
+    background-color: white;
+}
+
+#todo-list-container li:hover{
+    background-color: gray;
+}
+
+#reset-list-of-names-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 25px;
 }
